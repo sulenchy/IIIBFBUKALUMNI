@@ -224,10 +224,14 @@
     <Content Include="Admin\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="img\buk-logo.jpg" />
     <Content Include="img\IIIBF-Building-edited.jpg" />
     <Content Include="MemberDetails.aspx" />
     <Content Include="Membership\Profile.aspx" />
     <Content Include="Membership\Web.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="img\Articles\pta.png" />
     <Content Include="img\Articles\schoolclosing.jpg" />
@@ -535,6 +539,11 @@
     <Compile Include="MembersList.aspx.designer.cs">
       <DependentUpon>MembersList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802180624245_InitialCreate.cs" />
+    <Compile Include="Migrations\201802180624245_InitialCreate.Designer.cs">
+      <DependentUpon>201802180624245_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDatabaseInitializer.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -576,6 +585,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802180624245_InitialCreate.resx">
+      <DependentUpon>201802180624245_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

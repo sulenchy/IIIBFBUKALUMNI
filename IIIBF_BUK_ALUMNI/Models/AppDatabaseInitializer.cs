@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace IIIBF_BUK_ALUMNI.Models
 {
-    public class AppDatabaseInitializer: DropCreateDatabaseAlways<ApplicationDbContext>
+    public class AppDatabaseInitializer: CreateDatabaseIfNotExists<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         {

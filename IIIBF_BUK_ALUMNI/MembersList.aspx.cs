@@ -12,8 +12,8 @@ namespace IIIBF_BUK_ALUMNI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if(!IsPostBack)
-            //MemberList_Listview.SelectMethod = "GetMembers";
+            if (!IsPostBack)
+                MemberList_Listview.SelectMethod = "GetMembers";
         }
 
         //gets list of members
